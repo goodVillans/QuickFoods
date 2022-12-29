@@ -34,7 +34,9 @@ public class Main {
             }
 
             var requestedRestaurant = Restaurant.findRequestedRestaurant(findRestaurantsByLocation);
-            assert requestedRestaurant != null;
+            if (requestedRestaurant == null){
+                System.out.println("no Restaurant with this name");
+            }
             var restaurantMenu = requestedRestaurant.getMenu();
             var restaurantName = requestedRestaurant.getName();
             var restaurantContact = requestedRestaurant.getContactNumber();
