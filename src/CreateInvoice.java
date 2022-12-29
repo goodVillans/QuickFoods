@@ -6,8 +6,6 @@ import java.util.Hashtable;
 import java.util.Random;
 
 public class CreateInvoice {
-
-
     public static void generateInvoiceNoRestaurantsInArea(String name)  {
 
         try{
@@ -22,8 +20,7 @@ public class CreateInvoice {
             e.printStackTrace();
         }
     }
-
-//  final output for customer invoice
+    // final output for customer invoice
     public static void printOrderDetails
             (String name,
              String city,
@@ -39,7 +36,6 @@ public class CreateInvoice {
              Double total){
         try{
             BufferedWriter bw = new BufferedWriter(new FileWriter("invoice.txt"));
-
             var orderNo = new Random();
             int orderNumber = orderNo.nextInt(9999);
 
@@ -50,7 +46,7 @@ public class CreateInvoice {
             bw.write("Location: " + city + "\n");
             bw.write("\n");
             bw.write("You Have Ordered the Following from " + restName + "in " + city + ":");
-//          iterate thorough quantities and order datasets
+            // iterate thorough quantities and order datasets
             for(int i = 0; i < quantities.size(); i++){
                 String key = (String)orders.keySet().toArray()[i];
                 int value = orders.get(key);
