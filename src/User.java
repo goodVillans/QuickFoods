@@ -16,18 +16,14 @@ public abstract class User {
         this.email = email;
         this.contactNumber = contactNumber;
     }
-
+    public String getName() {
+        return name;
+    }
     public String setName() {
         System.out.println("Name: ");
         name = sc.nextLine();
         return name;
     }
-
-    public String getName() {
-        return name;
-    }
-
-
     public String getCity() {
         return city;
     }
@@ -37,7 +33,6 @@ public abstract class User {
         city = sc.nextLine();
         return city;
     }
-
     public String getAddress() {
         return address;
     }
@@ -47,7 +42,6 @@ public abstract class User {
         address = sc.nextLine();
         return address;
     }
-
     public String getEmail() {
         return email;
     }
@@ -57,7 +51,6 @@ public abstract class User {
         email = sc.nextLine();
         return null;
     }
-
     public String getContactNumber() {
         return contactNumber;
     }
@@ -67,7 +60,6 @@ public abstract class User {
         contactNumber = sc.nextLine();
         return contactNumber;
     }
-
     @Override
     public String toString() {
         return "User{" +
@@ -78,5 +70,4 @@ public abstract class User {
                 ", contactNumber='" + contactNumber + '\'' +
                 '}';
     }
-
 }
