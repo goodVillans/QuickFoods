@@ -1,0 +1,4 @@
+Pizza, 12.99
+Burger, 15.49
+Pasta, 10.99
+Dessert, 5.99
